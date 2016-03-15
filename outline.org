@@ -1,0 +1,52 @@
+*** Blog
+**** Relative link rewrite
+**** Make websites! chapter: Organizing content
+***** Ideal document metadata interface
+****** An consistent interface for accessing node data/metadata
+****** (ref) -> (metadata)
+****** (crit) -> Metadata-driven views
+***** Principle: nodes should have a canonical address
+which could be chosen
+  (as a filesystem path or URL),
+derived from the body of the node
+  (a "content address"),
+or arbitrarily assigned
+  (as in IPNS, and Camlistore's permanodes)
+
+Content addresses can't change, but neither can the resources they point to.
+
+Chosen addresses are expressive, but can change at the whim of the provence.
+
+Arbitrarily assigned address intentionally carry no meaning, so there should be no temptation to change them.
+
+If canonical paths can change, ideally old references would still work, and notify the agent of the new path.
+
+****** Should a canonical heirarchy be exposed?
+cool urls don't change. In other words, a canonical heirarchy provides a mechanism for durable inter-resource reference.
+OTOH, a canonical heirarchy is inelegant, if metadata-driven heirarchies are available. How else can durable reference be enabled?
+
+If resources have durable IDs, a function could map from id to resource path, allowing resource paths to change.
+
+Alternatively, the IDs themselves could be used as the path.
+
+***** What constitutes a node, for the purpose of addressing?
+A document is often an imperfect linearization of
+a pool of interrelated semantic "atoms".
+
+Further, there are always relations between atoms included in the document,
+and those which are just outside its scope.
+
+While this is useful for narration and argumentation, it is a poor fit for mapping ideas.
+
+- Fragment-addressing (heading and anchor links, open annotation fragment identifiers, and indie web fragments)
+- Granular nodes (tiddlywiki)
+  - Keep nodes very small
+  - Compose nodes to make larger structures
+    * Transclusion (TiddlyWiki)
+    * Metadata-driven views
+
+Fragment addressing is useful for referencing within external documents or documents which are necessarily large.
+If the target document is modified, fragment references may break.
+
+Granular nodes make granular references easy, and are thus highly desirable for densely-interlinked systems.
+These types of systems are great for organizing notes.
